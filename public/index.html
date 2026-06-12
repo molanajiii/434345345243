@@ -3,727 +3,61 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PlayBeat Digital — The Ultimate Heaven | Gift Cards</title>
+<title>PlayBeat Digital — The Ultimate Heaven</title>
+<meta name="description" content="Pakistan's premium digital marketplace for games, gift cards, AI tools, software, subscriptions and top-ups — all in PKR." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
-<style>
-/* ════════════════════════════════════════════════════════════
-   TOKENS — PRIME SILVER / GOLD HEAVEN
-   ════════════════════════════════════════════════════════════ */
-:root{
-  --void:#050608;
-  --deep:#0a0c12;
-  --panel:#0d0f16;
-  --silver-100:#fdfdfe;
-  --silver-300:#cfd6e3;
-  --silver-500:#9aa5b8;
-  --silver-700:#5b6478;
-  --gold-300:#eaf6ff;
-  --gold-400:#5fb8ff;
-  --gold-500:#2f86e8;
-  --gold-700:#1a4f9e;
-  --text-primary:#f7f8fb;
-  --text-secondary:#a9b2c4;
-  --text-dim:#5a6478;
-  --line:rgba(95,184,255,.12);
-  --border-dim:rgba(95,184,255,.12);
-  --border-bright:rgba(95,184,255,.42);
-  --glow-gold:0 0 36px rgba(95,184,255,.28);
-  --glow-silver:0 0 36px rgba(210,220,240,.18);
-  --ease:cubic-bezier(.22,.61,.36,1);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:'Exo 2',sans-serif;
-  background:
-    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(220,55,55,.03) 0%, transparent 60%),
-    var(--void);
-  color:var(--text-primary);
-  -webkit-font-smoothing:antialiased;
-}
-a{ text-decoration:none; color:inherit; }
-img{ max-width:100%; }
-button{ cursor:pointer; font-family:inherit; }
-
-/* ════════════════════════════════════════════════════════════
-   TICKER
-   ════════════════════════════════════════════════════════════ */
-.ticker-bar{
-  background:linear-gradient(90deg, rgba(95,184,255,.08) 0%, rgba(210,220,240,.05) 50%, rgba(95,184,255,.08) 100%);
-  border-bottom:1px solid var(--border-dim);
-  overflow:hidden; white-space:nowrap; height:32px;
-  display:flex; align-items:center; position:relative;
-}
-.ticker-bar::before, .ticker-bar::after{
-  content:''; position:absolute; top:0; bottom:0; width:60px; z-index:2; pointer-events:none;
-}
-.ticker-bar::before{ left:0; background:linear-gradient(90deg, var(--void), transparent); }
-.ticker-bar::after{ right:0; background:linear-gradient(-90deg, var(--void), transparent); }
-.ticker-inner{
-  display:inline-flex; gap:48px; align-items:center;
-  animation:ticker-scroll 28s linear infinite;
-  font-family:'Share Tech Mono', monospace; font-size:10px; letter-spacing:1.2px; color:var(--text-secondary);
-}
-@keyframes ticker-scroll{ 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
-.t-live{ display:inline-flex; align-items:center; gap:7px; color:var(--gold-400); font-weight:700; letter-spacing:2px; }
-.pulse{
-  display:inline-block; width:6px; height:6px; border-radius:50%;
-  background:var(--gold-400); box-shadow:0 0 8px var(--gold-400);
-  animation:pulse 1.4s ease-in-out infinite;
-}
-@keyframes pulse{ 0%,100%{opacity:1; transform:scale(1);} 50%{opacity:.4; transform:scale(.7);} }
-
-/* ════════════════════════════════════════════════════════════
-   HEADER
-   ════════════════════════════════════════════════════════════ */
-header{
-  background:linear-gradient(180deg, rgba(7,8,12,.99) 0%, rgba(11,12,18,.98) 100%);
-  border-bottom:1px solid var(--border-dim);
-  position:sticky; top:0; z-index:100;
-  backdrop-filter:blur(20px) saturate(1.4);
-}
-.header-top{ border-bottom:1px solid var(--border-dim); padding:.55rem 0; }
-.header-top-inner{
-  max-width:1280px; margin:0 auto; padding:0 1.5rem;
-  display:flex; align-items:center; justify-content:space-between; gap:16px;
-}
-.search-wrap{ flex:1; max-width:680px; }
-.search-bar{
-  display:flex; align-items:center;
-  background:rgba(14,16,24,.95);
-  border:1px solid var(--border-dim);
-  border-radius:3px; overflow:hidden;
-  transition:border-color .18s, box-shadow .18s;
-}
-.search-bar:focus-within{ border-color:var(--gold-400); box-shadow:0 0 0 2px rgba(95,184,255,.1), var(--glow-gold); }
-.search-category{
-  background:rgba(95,184,255,.05); border:none; border-right:1px solid var(--border-dim);
-  color:var(--text-secondary); font-family:'Share Tech Mono', monospace;
-  font-size:10px; letter-spacing:1px; padding:8px 10px; outline:none; cursor:pointer; flex-shrink:0;
-}
-.search-ico{ color:var(--text-dim); padding:0 8px; display:flex; align-items:center; flex-shrink:0; }
-.search-input{
-  flex:1; background:transparent; border:none; outline:none;
-  color:var(--text-primary); font-family:'Exo 2', sans-serif; font-size:13px; padding:8px 10px;
-}
-.search-input::placeholder{ color:var(--text-dim); }
-.search-btn{
-  display:flex; align-items:center; gap:6px; position:relative; overflow:hidden;
-  background:linear-gradient(90deg, rgba(95,184,255,.18), rgba(210,220,240,.08));
-  border:none; border-left:1px solid var(--border-dim);
-  color:var(--gold-400); font-family:'Share Tech Mono', monospace;
-  font-size:10px; letter-spacing:1.5px; font-weight:700; text-transform:uppercase;
-  padding:8px 18px; transition:background .3s, color .3s; flex-shrink:0;
-}
-.search-btn::after{
-  content:''; position:absolute; top:-80%; left:-35%; width:26%; height:260%;
-  background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,.55) 50%, transparent 70%);
-  transform:translateX(-220%) skewX(-18deg);
-  transition:transform .6s var(--ease); pointer-events:none;
-}
-.search-btn:hover{ background:linear-gradient(90deg, var(--gold-400), var(--silver-100)); color:#081428; }
-.search-btn:hover::after{ transform:translateX(420%) skewX(-18deg); }
-.top-actions{ display:flex; align-items:center; gap:8px; flex-shrink:0; }
-.btn-wish{
-  background:rgba(95,184,255,.05); border:1px solid var(--border-dim);
-  color:var(--text-secondary); border-radius:5px; padding:7px 10px;
-  display:flex; align-items:center; transition:all .18s;
-}
-.btn-wish:hover{ color:#e05; border-color:rgba(220,0,80,.4); background:rgba(220,0,80,.06); }
-.btn-login{
-  background:transparent; border:1px solid var(--border-dim);
-  color:var(--text-secondary); font-family:'Share Tech Mono', monospace;
-  font-size:10px; letter-spacing:1.5px; text-transform:uppercase;
-  padding:7px 18px;
-  clip-path:polygon(0% 0%, calc(100% - 9px) 0%, 100% 9px, 100% 100%, 0% 100%);
-  transition:all .25s var(--ease);
-}
-.btn-login:hover{ border-color:var(--gold-400); color:var(--gold-400); background:rgba(95,184,255,.05); }
-.btn-login:active{ transform:scale(.96); }
-.btn-prime{
-  position:relative;
-  background:linear-gradient(135deg, var(--gold-700), var(--gold-500), var(--gold-300));
-  border:none; color:#081428; font-family:'Share Tech Mono', monospace;
-  font-size:10px; letter-spacing:1.5px; font-weight:700; text-transform:uppercase;
-  padding:8px 20px;
-  clip-path:polygon(9px 0%, 100% 0%, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0% 100%, 0% 9px);
-  filter:drop-shadow(0 0 16px rgba(95,184,255,.35));
-  transition:filter .25s var(--ease), transform .2s var(--ease);
-}
-.btn-prime::after{
-  content:''; position:absolute; top:-80%; left:-35%; width:30%; height:260%;
-  background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,.65) 50%, transparent 70%);
-  transform:translateX(-220%) skewX(-18deg);
-  transition:transform .6s var(--ease); pointer-events:none;
-}
-.btn-prime:hover{ filter:drop-shadow(0 0 30px rgba(95,184,255,.55)); transform:translateY(-1px); }
-.btn-prime:hover::after{ transform:translateX(420%) skewX(-18deg); }
-.btn-prime:active{ transform:translateY(0) scale(.96); }
-
-.header-inner{
-  max-width:1280px; margin:0 auto; padding:.6rem 1.5rem;
-  display:flex; align-items:center; gap:32px;
-}
-.logo{ display:flex; flex-direction:column; gap:0; flex-shrink:0; position:relative; }
-.logo-digital{
-  font-family:'Share Tech Mono', monospace; font-size:7px;
-  letter-spacing:4px; text-transform:uppercase; color:var(--gold-400); opacity:.8;
-}
-.logo-wordmark{ display:flex; align-items:baseline; gap:0; line-height:1; }
-.logo-play{ font-family:'Orbitron', sans-serif; font-size:22px; font-weight:900; color:var(--text-primary); letter-spacing:-1px; }
-.logo-beat{
-  font-family:'Orbitron', sans-serif; font-size:22px; font-weight:900; letter-spacing:-1px;
-  background:linear-gradient(100deg, var(--gold-700), var(--gold-300), var(--gold-700));
-  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-  text-shadow:0 0 16px rgba(95,184,255,.4);
-}
-.logo-pvt{
-  font-family:'Share Tech Mono', monospace; font-size:7.5px; letter-spacing:3px;
-  text-transform:uppercase; color:var(--text-dim); margin-top:1px; padding-left:2px;
-}
-.logo-underline{ height:1px; margin-top:3px; background:linear-gradient(90deg, var(--gold-400), var(--silver-300), transparent); }
-
-nav{ display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
-.nav-item{
-  font-family:'Share Tech Mono', monospace; font-size:10.5px; letter-spacing:1px;
-  text-transform:uppercase; color:var(--text-secondary);
-  padding:6px 10px; border-radius:4px; border:1px solid transparent;
-  transition:color .15s, border-color .15s, background .15s; white-space:nowrap;
-}
-.nav-item:hover{ color:var(--gold-400); border-color:var(--border-dim); background:rgba(95,184,255,.04); }
-.nav-item.active{
-  color:var(--gold-400); border-color:var(--border-bright);
-  background:rgba(95,184,255,.07); box-shadow:0 0 10px rgba(95,184,255,.12);
-}
-.nav-sep{ width:1px; height:16px; background:var(--border-dim); margin:0 4px; flex-shrink:0; }
-.nav-special{ color:var(--gold-300) !important; border-color:rgba(255,243,196,.2) !important; background:rgba(255,243,196,.05) !important; }
-.nav-special:hover{ border-color:rgba(255,243,196,.45) !important; background:rgba(255,243,196,.1) !important; }
-.nav-outsource{ color:var(--silver-300) !important; border-color:rgba(207,214,227,.2) !important; background:rgba(207,214,227,.05) !important; }
-.nav-outsource:hover{ border-color:rgba(207,214,227,.45) !important; background:rgba(207,214,227,.1) !important; }
-
-/* ════════════════════════════════════════════════════════════
-   HERO — THE ULTIMATE HEAVEN (unchanged)
-   ════════════════════════════════════════════════════════════ */
-.heaven-hero{
-  position:relative; min-height:92vh; overflow:hidden;
-  display:flex; align-items:center;
-  background:
-    radial-gradient(ellipse 70% 60% at 50% -10%, rgba(95,184,255,.10) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 55% at 85% 100%, rgba(210,220,240,.06) 0%, transparent 55%),
-    radial-gradient(ellipse 55% 45% at 8% 85%, rgba(220,55,55,.03) 0%, transparent 55%),
-    linear-gradient(170deg, var(--deep) 0%, var(--void) 100%);
-}
-.heaven-hero::before{
-  content:''; position:absolute; top:-30%; left:50%; transform:translateX(-50%);
-  width:1400px; height:1400px;
-  background:repeating-conic-gradient(from 0deg, rgba(95,184,255,.05) 0deg 6deg, transparent 6deg 12deg);
-  border-radius:50%;
-  mask-image:radial-gradient(circle, black 0%, transparent 65%);
-  animation:halo-spin 90s linear infinite; pointer-events:none;
-}
-@keyframes halo-spin{ to{ transform:translateX(-50%) rotate(360deg); } }
-.mote{
-  position:absolute; width:4px; height:4px; border-radius:50%;
-  background:var(--gold-400); box-shadow:0 0 12px var(--gold-400);
-  opacity:.55; animation:mote-drift 16s ease-in-out infinite; pointer-events:none;
-}
-@keyframes mote-drift{ 0%,100%{ transform:translateY(0); opacity:.25; } 50%{ transform:translateY(-34px); opacity:.9; } }
-.heaven-inner{
-  max-width:1280px; margin:0 auto; padding:0 1.5rem;
-  position:relative; z-index:2;
-  display:grid; grid-template-columns:1fr 460px; gap:4rem; align-items:center;
-}
-.heaven-eyebrow{
-  display:inline-flex; align-items:center; gap:10px;
-  font-family:'Share Tech Mono', monospace; font-size:11px; letter-spacing:4px; text-transform:uppercase;
-  color:var(--gold-400); border:1px solid var(--border-bright);
-  background:rgba(95,184,255,.05); padding:7px 18px 7px 12px; border-radius:2px; margin-bottom:26px;
-  box-shadow:var(--glow-gold), inset 0 0 14px rgba(95,184,255,.04);
-}
-.heaven-eyebrow .dot{
-  width:6px; height:6px; border-radius:50%; background:var(--gold-400);
-  box-shadow:0 0 10px var(--gold-400); animation:pulse 1.8s ease-in-out infinite;
-}
-.heaven-hero h1{
-  font-family:'Orbitron', sans-serif; font-weight:900;
-  font-size:clamp(2.4rem, 5.2vw, 4.4rem); line-height:1.05; letter-spacing:-1px; margin-bottom:8px;
-}
-.heaven-hero h1 .l1{
-  display:block;
-  background:linear-gradient(100deg, var(--silver-500) 0%, var(--silver-100) 25%, #ffffff 40%, var(--silver-100) 60%, var(--silver-500) 80%, var(--silver-300) 100%);
-  background-size:220% 100%; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-  animation:silver-sweep 6s linear infinite;
-}
-@keyframes silver-sweep{ 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
-.heaven-hero h1 .l2{
-  display:block; margin-top:6px; font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:600;
-  font-size:clamp(2rem, 4.2vw, 3.4rem); letter-spacing:1px;
-  background:linear-gradient(100deg, var(--gold-700) 0%, var(--gold-400) 35%, var(--gold-300) 50%, var(--gold-400) 65%, var(--gold-700) 100%);
-  background-size:220% 100%; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-  animation:gold-sweep 5s linear infinite; text-shadow:0 0 48px rgba(95,184,255,.2);
-}
-@keyframes gold-sweep{ 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
-.heaven-rule{ width:64px; height:1px; margin:24px 0; background:linear-gradient(90deg, var(--gold-400), transparent); }
-.heaven-sub{ font-size:16px; line-height:1.85; color:var(--text-secondary); max-width:480px; margin-bottom:36px; }
-.heaven-sub b{ color:var(--gold-400); font-weight:600; }
-.heaven-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:46px; }
-.cta-gold{
-  display:inline-flex; align-items:center; gap:10px;
-  font-family:'Orbitron', sans-serif; font-size:12px; font-weight:800; letter-spacing:2.5px; text-transform:uppercase;
-  padding:17px 34px; border:none; position:relative;
-  background:linear-gradient(135deg, var(--gold-700) 0%, var(--gold-500) 45%, var(--gold-300) 100%); color:#081428;
-  clip-path:polygon(14px 0%, 100% 0%, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0% 100%, 0% 14px);
-  filter:drop-shadow(0 0 28px rgba(95,184,255,.32)) drop-shadow(0 12px 26px rgba(0,0,0,.5));
-  transition:filter .3s var(--ease), transform .25s var(--ease);
-}
-.cta-gold::before{
-  content:''; position:absolute; top:0; left:0; width:18px; height:18px;
-  background:linear-gradient(135deg, rgba(255,255,255,.85), transparent 70%);
-  clip-path:polygon(0 0, 100% 0, 0 100%); pointer-events:none;
-}
-.cta-gold::after{
-  content:''; position:absolute; top:-80%; left:-35%; width:30%; height:260%;
-  background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,.6) 50%, transparent 70%);
-  transform:translateX(-220%) skewX(-18deg);
-  transition:transform .7s var(--ease); pointer-events:none;
-}
-.cta-gold:hover{
-  transform:translateY(-3px);
-  filter:drop-shadow(0 0 52px rgba(95,184,255,.55)) drop-shadow(0 18px 34px rgba(0,0,0,.6));
-}
-.cta-gold:hover::after{ transform:translateX(420%) skewX(-18deg); }
-.cta-gold:active{ transform:translateY(-1px) scale(.98); }
-
-.cta-silver{
-  display:inline-flex; align-items:center; gap:10px;
-  font-family:'Orbitron', sans-serif; font-size:12px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
-  padding:17px 34px; position:relative; overflow:hidden;
-  background:rgba(210,220,240,.03); border:1px solid rgba(210,220,240,.28);
-  color:var(--silver-300);
-  clip-path:polygon(0% 0%, calc(100% - 14px) 0%, 100% 14px, 100% 100%, 14px 100%, 0% calc(100% - 14px));
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
-  transition:all .3s var(--ease), filter .3s var(--ease);
-}
-.cta-silver::after{
-  content:''; position:absolute; top:-80%; left:-35%; width:30%; height:260%;
-  background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,.18) 50%, transparent 70%);
-  transform:translateX(-220%) skewX(-18deg);
-  transition:transform .7s var(--ease); pointer-events:none;
-}
-.cta-silver:hover{
-  background:rgba(210,220,240,.07); border-color:var(--silver-100); color:#fff;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.15);
-  filter:drop-shadow(0 0 22px rgba(210,220,240,.28));
-  transform:translateY(-2px);
-}
-.cta-silver:hover::after{ transform:translateX(420%) skewX(-18deg); }
-.cta-silver:active{ transform:translateY(0) scale(.98); }
-.heaven-trust{ display:flex; gap:24px; flex-wrap:wrap; }
-.heaven-trust-item{
-  display:flex; align-items:center; gap:7px;
-  font-family:'Share Tech Mono', monospace; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-dim);
-}
-.heaven-trust-item svg{ color:var(--gold-400); }
-.heaven-panel{
-  background:linear-gradient(160deg, rgba(20,20,26,.85) 0%, rgba(6,6,9,.95) 100%);
-  border:1px solid var(--border-dim); border-radius:18px; padding:32px;
-  position:relative; overflow:hidden; box-shadow:0 30px 90px rgba(0,0,0,.65), inset 0 0 0 1px rgba(95,184,255,.04);
-}
-.heaven-panel::before{
-  content:''; position:absolute; top:0; left:0; right:0; height:1px;
-  background:linear-gradient(90deg, transparent, var(--gold-400), var(--silver-100), var(--gold-400), transparent);
-}
-.hp-label{
-  font-family:'Share Tech Mono', monospace; font-size:9.5px; letter-spacing:3px; text-transform:uppercase;
-  color:var(--text-dim); display:flex; align-items:center; gap:8px; margin-bottom:28px;
-}
-.hp-label .live{ width:6px; height:6px; border-radius:50%; background:var(--gold-400); box-shadow:0 0 10px var(--gold-400); animation:pulse 1.4s ease-in-out infinite; }
-.emblem-stage{ position:relative; width:100%; height:220px; display:flex; align-items:center; justify-content:center; margin-bottom:26px; }
-.emblem-ring{ position:absolute; border-radius:50%; border:1px solid var(--border-dim); }
-.emblem-ring.r1{ width:220px; height:220px; border-color:rgba(95,184,255,.18); border-top-color:var(--gold-400); animation:spin 16s linear infinite; }
-.emblem-ring.r2{ width:170px; height:170px; border-color:rgba(210,220,240,.14); border-bottom-color:var(--silver-100); animation:spin-rev 12s linear infinite; }
-.emblem-ring.r3{ width:124px; height:124px; border-color:rgba(95,184,255,.14); border-right-color:var(--gold-300); animation:spin 9s linear infinite; }
-@keyframes spin{ to{ transform:rotate(360deg); } }
-@keyframes spin-rev{ to{ transform:rotate(-360deg); } }
-.emblem-core{
-  position:absolute; width:84px; height:84px; border-radius:50%;
-  background:radial-gradient(circle, var(--silver-100) 0%, var(--gold-400) 55%, transparent 100%);
-  box-shadow:0 0 60px rgba(95,184,255,.5), 0 0 110px rgba(210,220,240,.25);
-  animation:core-pulse 2.6s ease-in-out infinite;
-  display:flex; align-items:center; justify-content:center;
-  font-family:'Orbitron', sans-serif; font-weight:900; font-size:11px; letter-spacing:3px; color:#081428; text-align:center;
-}
-@keyframes core-pulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.07); } }
-.emblem-dot{ position:absolute; width:6px; height:6px; border-radius:50%; background:var(--gold-300); box-shadow:0 0 8px var(--gold-300); }
-.hp-stats{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px; }
-.hp-stat{ background:rgba(10,10,14,.7); border:1px solid var(--border-dim); border-radius:8px; padding:13px; transition:border-color .2s; }
-.hp-stat:hover{ border-color:var(--border-bright); }
-.hp-stat .val{
-  font-family:'Orbitron', sans-serif; font-size:21px; font-weight:800;
-  background:linear-gradient(100deg, var(--gold-700), var(--gold-300), var(--gold-700));
-  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-  line-height:1; margin-bottom:4px;
-}
-.hp-stat .lbl{ font-family:'Share Tech Mono', monospace; font-size:8.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-dim); }
-.hp-curated{ border-top:1px solid var(--border-dim); padding-top:16px; }
-.hp-curated-label{ font-family:'Share Tech Mono', monospace; font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:var(--text-dim); margin-bottom:10px; }
-.hp-chip{
-  display:flex; align-items:center; justify-content:space-between; gap:10px;
-  background:rgba(10,10,14,.7); border:1px solid var(--border-dim); border-radius:7px; padding:10px 14px; margin-bottom:8px;
-  transition:border-color .2s, transform .2s;
-}
-.hp-chip:hover{ border-color:var(--border-bright); transform:translateX(3px); }
-.hp-chip-name{ font-size:12px; color:var(--text-primary); font-weight:500; }
-.hp-chip-price{ font-family:'Share Tech Mono', monospace; font-size:11px; color:var(--gold-400); white-space:nowrap; }
-
-/* ════════════════════════════════════════════════════════════
-   SECTION SHELL / EYEBROW / TITLE
-   ════════════════════════════════════════════════════════════ */
-.wrap{ max-width:1280px; margin:0 auto; padding:0 1.5rem; }
-.section-header{ display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:1.75rem; gap:1rem; }
-.section-eyebrow{
-  font-family:'Share Tech Mono', monospace; font-size:10px; letter-spacing:2.5px;
-  text-transform:uppercase; color:var(--gold-400); margin-bottom:6px;
-}
-.section-title{
-  font-family:'Orbitron', sans-serif; font-size:clamp(1.3rem, 3vw, 1.9rem); font-weight:800; letter-spacing:-.5px; color:#fff;
-}
-.section-link{
-  font-family:'Share Tech Mono', monospace; font-size:10px; letter-spacing:1.5px; text-transform:uppercase;
-  color:var(--text-dim); display:flex; align-items:center; gap:6px; transition:color .2s; white-space:nowrap;
-}
-.section-link:hover{ color:var(--gold-400); }
-
-/* ════════════════════════════════════════════════════════════
-   HOT · TRENDING · POPULAR
-   ════════════════════════════════════════════════════════════ */
-.htp-section{
-  background:linear-gradient(90deg, rgba(13,15,22,.9) 0%, rgba(16,18,26,.95) 50%, rgba(13,15,22,.9) 100%);
-  border-top:1px solid var(--border-dim); border-bottom:1px solid var(--border-dim);
-  padding:3.5rem 0;
-}
-.htp-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
-.htp-col{
-  background:rgba(10,10,14,.6); border:1px solid var(--border-dim); border-radius:12px; padding:20px;
-}
-.htp-col-head{ display:flex; align-items:center; gap:10px; margin-bottom:16px; padding-bottom:14px; border-bottom:1px solid var(--border-dim); }
-.htp-icon{ font-size:22px; }
-.htp-col-title{ font-family:'Orbitron', sans-serif; font-size:13px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-primary); }
-.htp-col-tag{
-  font-family:'Share Tech Mono', monospace; font-size:8.5px; letter-spacing:1.5px; text-transform:uppercase;
-  color:var(--gold-400); margin-left:auto; border:1px solid var(--border-bright); background:rgba(95,184,255,.06);
-  padding:3px 8px; border-radius:3px;
-}
-.htp-item{
-  display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;
-  padding:10px 8px; border-radius:8px; transition:background .18s, transform .18s;
-}
-.htp-item:hover{ background:rgba(95,184,255,.05); transform:translateX(3px); }
-.htp-num{ font-family:'Orbitron', sans-serif; font-size:16px; font-weight:900; color:var(--border-bright); min-width:24px; }
-.htp-item:hover .htp-num{ color:var(--gold-400); }
-.htp-emoji{ font-size:22px; flex-shrink:0; }
-.htp-info{ flex:1; min-width:0; }
-.htp-name{
-  font-family:'Exo 2', sans-serif; font-size:12.5px; font-weight:600; color:var(--silver-300);
-  line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-}
-.htp-price{ font-family:'Share Tech Mono', monospace; font-size:11px; color:var(--gold-400); margin-top:2px; }
-
-/* ════════════════════════════════════════════════════════════
-   PRODUCT GRID — GIFT CARDS (SILVER GLOW)
-   ════════════════════════════════════════════════════════════ */
-.cat-banner{ padding:24px 0 20px; border-bottom:1px solid var(--line); margin-bottom:24px; }
-.cat-banner h1{
-  font-family:'Orbitron', sans-serif; font-size:36px; font-weight:900; margin:0 0 8px; color:var(--text-primary);
-}
-.cat-banner p{ color:var(--text-dim); font-size:14px; margin:0; font-family:'Exo 2', sans-serif; }
-
-.product-grid{
-  display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:16px;
-}
-.product-card{
-  background:linear-gradient(160deg, rgba(18,18,24,.92) 0%, rgba(7,7,10,.98) 100%);
-  border:1px solid var(--border-dim); border-radius:12px; overflow:hidden;
-  display:flex; flex-direction:column; position:relative;
-  transition:transform .22s var(--ease), border-color .22s, box-shadow .22s;
-}
-.product-card::before{
-  content:''; position:absolute; top:0; left:0; right:0; height:1px;
-  background:linear-gradient(90deg, transparent 0%, var(--gold-400) 50%, transparent 100%);
-  opacity:0; transition:opacity .22s;
-}
-.card-silver-glow:hover::before{ opacity:1; }
-.card-silver-glow:hover{
-  transform:translateY(-5px);
-  border-color:rgba(95,184,255,.35);
-  box-shadow:0 14px 40px rgba(0,0,0,.55), 0 0 26px rgba(95,184,255,.12);
-}
-.product-card-img{
-  width:100%; aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;
-  font-size:44px;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(95,184,255,.10) 0%, transparent 55%),
-    linear-gradient(160deg, rgba(30,30,38,.9), rgba(8,8,11,.95));
-  position:relative;
-}
-.product-card-img::after{
-  content:''; position:absolute; inset:0;
-  background:repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,.12) 2px, rgba(0,0,0,.12) 4px);
-  pointer-events:none;
-}
-.product-card-body{ padding:14px; display:flex; flex-direction:column; gap:5px; flex:1; }
-.product-card-game{
-  font-family:'Share Tech Mono', monospace; font-size:9px; letter-spacing:2px; text-transform:uppercase;
-  color:var(--silver-500); opacity:.85;
-}
-.product-card-name{ font-family:'Exo 2', sans-serif; font-size:13px; font-weight:600; color:var(--text-primary); line-height:1.4; }
-.price{
-  font-family:'Orbitron', sans-serif; font-size:17px; font-weight:800; margin-top:2px;
-  background:linear-gradient(100deg, var(--gold-700), var(--gold-300), var(--gold-700));
-  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-}
-.product-offers{ display:flex; gap:8px; margin-top:auto; padding-top:10px; }
-.add-cart-btn, .buy-btn{
-  flex:1; font-family:'Share Tech Mono', monospace; font-size:9.5px; letter-spacing:1.5px; text-transform:uppercase;
-  padding:9px 6px; transition:all .25s var(--ease); font-weight:700; position:relative; overflow:hidden;
-}
-.add-cart-btn{
-  background:rgba(210,220,240,.02); border:1px solid var(--border-bright); color:var(--silver-300);
-  clip-path:polygon(0% 0%, calc(100% - 8px) 0%, 100% 8px, 100% 100%, 0% 100%);
-}
-.add-cart-btn:hover{ background:rgba(210,220,240,.09); color:#fff; border-color:var(--silver-100); }
-.add-cart-btn:active{ transform:scale(.95); }
-.buy-btn{
-  background:linear-gradient(135deg, var(--gold-700), var(--gold-500), var(--gold-300));
-  border:none; color:#081428;
-  clip-path:polygon(8px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 8px);
-}
-.buy-btn::after{
-  content:''; position:absolute; top:-80%; left:-35%; width:30%; height:260%;
-  background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,.65) 50%, transparent 70%);
-  transform:translateX(-220%) skewX(-18deg);
-  transition:transform .6s var(--ease); pointer-events:none;
-}
-.buy-btn:hover{ filter:drop-shadow(0 0 14px rgba(95,184,255,.5)); }
-.buy-btn:hover::after{ transform:translateX(420%) skewX(-18deg); }
-.buy-btn:active{ transform:scale(.95); }
-
-/* ── Ultra button focus + reduced motion ───────────────────── */
-.cta-gold:focus-visible, .cta-silver:focus-visible, .btn-prime:focus-visible,
-.btn-login:focus-visible, .search-btn:focus-visible,
-.add-cart-btn:focus-visible, .buy-btn:focus-visible{
-  outline:2px solid var(--gold-300); outline-offset:3px;
-}
-@media (prefers-reduced-motion: reduce){
-  .cta-gold::after, .cta-silver::after, .btn-prime::after, .search-btn::after, .buy-btn::after{ display:none; }
-  .cta-gold:hover, .cta-silver:hover, .btn-prime:hover{ transform:none; }
-}
-
-.wishlist-btn{
-  position:absolute; top:10px; right:10px; z-index:2;
-  width:30px; height:30px; border-radius:50%;
-  background:rgba(8,8,11,.7); border:1px solid var(--border-dim);
-  color:var(--text-secondary); font-size:14px;
-  display:flex; align-items:center; justify-content:center; transition:all .18s;
-}
-.wishlist-btn:hover{ color:#ff5d8f; border-color:rgba(255,93,143,.4); background:rgba(255,93,143,.08); }
-.wishlist-btn.active{ color:#ff5d8f; border-color:rgba(255,93,143,.5); }
-
-.badge-sale, .badge-new{
-  position:absolute; top:10px; left:10px; z-index:2;
-  font-family:'Share Tech Mono', monospace; font-size:8.5px; letter-spacing:2px; font-weight:700;
-  text-transform:uppercase; padding:4px 10px; border-radius:3px;
-}
-.badge-sale{
-  background:linear-gradient(135deg, var(--gold-700), var(--gold-400));
-  color:#081428; box-shadow:0 0 14px rgba(95,184,255,.4);
-}
-.badge-new{
-  background:linear-gradient(135deg, var(--silver-500), var(--silver-100));
-  color:#15161c; box-shadow:0 0 14px rgba(210,220,240,.3);
-}
-
-/* ════════════════════════════════════════════════════════════
-   FOOTER
-   ════════════════════════════════════════════════════════════ */
-.site-footer{
-  background:
-    radial-gradient(ellipse 70% 50% at 20% 100%, rgba(95,184,255,.05) 0%, transparent 60%),
-    linear-gradient(180deg, var(--deep) 0%, var(--void) 100%);
-  border-top:1px solid var(--border-dim); position:relative; overflow:hidden; margin-top:2rem;
-}
-.site-footer::before{
-  content:''; position:absolute; top:0; left:10%; right:10%; height:1px;
-  background:linear-gradient(90deg, transparent, var(--gold-400), var(--silver-300), transparent); opacity:.5;
-}
-.footer-inner{ max-width:1280px; margin:0 auto; padding:3rem 1.5rem 1.5rem; position:relative; z-index:1; }
-.footer-banner{
-  display:flex; align-items:flex-start; justify-content:space-between; gap:2rem;
-  margin-bottom:2.5rem; padding-bottom:2rem; border-bottom:1px solid var(--border-dim);
-}
-.footer-logo{ display:flex; flex-direction:column; gap:2px; }
-.footer-logo-digital{
-  font-family:'Share Tech Mono', monospace; font-size:7px; letter-spacing:4px; text-transform:uppercase;
-  color:var(--gold-400); opacity:.75;
-}
-.footer-logo-wordmark{ display:flex; align-items:baseline; gap:0; }
-.footer-logo-play{ font-family:'Orbitron', sans-serif; font-size:26px; font-weight:900; color:var(--text-primary); }
-.footer-logo-beat{
-  font-family:'Orbitron', sans-serif; font-size:26px; font-weight:900;
-  background:linear-gradient(100deg, var(--gold-700), var(--gold-300), var(--gold-700));
-  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-  text-shadow:0 0 16px rgba(95,184,255,.4);
-}
-.footer-logo-pvt{ font-family:'Share Tech Mono', monospace; font-size:7.5px; letter-spacing:3px; text-transform:uppercase; color:var(--text-dim); margin-top:2px; padding-left:2px; }
-.footer-logo-line{ height:1px; margin-top:6px; background:linear-gradient(90deg, var(--gold-400), var(--silver-300), transparent); }
-.footer-tagline{ font-family:'Exo 2', sans-serif; font-size:12px; color:var(--text-dim); margin-top:10px; letter-spacing:.3px; }
-.ft-play{ color:var(--silver-300); }
-.ft-beat{ color:var(--gold-400); }
-
-.footer-support{ display:flex; flex-direction:column; gap:10px; align-items:flex-start; }
-.support-label{ font-family:'Share Tech Mono', monospace; font-size:9px; letter-spacing:2.5px; text-transform:uppercase; color:var(--text-dim); }
-.btn-support{
-  display:inline-flex; align-items:center; gap:8px;
-  font-family:'Share Tech Mono', monospace; font-size:10px; letter-spacing:1.2px; text-transform:uppercase;
-  padding:8px 18px; border-radius:4px; border:1px solid var(--border-dim);
-  transition:all .18s; min-width:140px; background:rgba(14,16,24,.9);
-}
-.btn-support.email{ color:var(--gold-400); }
-.btn-support.whatsapp{ color:#25d366; border-color:rgba(37,211,102,.25); }
-.btn-support.telegram{ color:#2aabee; border-color:rgba(42,171,238,.25); }
-.btn-support:hover{ background:rgba(95,184,255,.08); border-color:var(--border-bright); box-shadow:var(--glow-gold); }
-.btn-support.whatsapp:hover{ background:rgba(37,211,102,.08); border-color:rgba(37,211,102,.5); box-shadow:0 0 14px rgba(37,211,102,.2); }
-.btn-support.telegram:hover{ background:rgba(42,171,238,.08); border-color:rgba(42,171,238,.5); box-shadow:0 0 14px rgba(42,171,238,.2); }
-
-.footer-grid{ display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:2rem; margin-bottom:2.5rem; }
-.footer-col-title{
-  font-family:'Share Tech Mono', monospace; font-size:9.5px; letter-spacing:2.5px; text-transform:uppercase;
-  color:var(--gold-400); margin-bottom:14px; opacity:.85;
-}
-.footer-nav-grid{ display:grid; grid-template-columns:1fr 1fr; gap:6px 10px; }
-.footer-nav-link{ font-family:'Exo 2', sans-serif; font-size:12px; color:var(--text-secondary); padding:4px 0; transition:color .15s; white-space:nowrap; }
-.footer-nav-link:hover{ color:var(--gold-400); }
-.footer-nav-link.special{ color:var(--gold-300) !important; }
-.footer-link-list{ list-style:none; display:flex; flex-direction:column; gap:8px; }
-.footer-link-list a{ font-family:'Exo 2', sans-serif; font-size:12px; color:var(--text-secondary); transition:color .15s; }
-.footer-link-list a:hover{ color:var(--gold-400); }
-.footer-col p{ color:var(--text-secondary) !important; }
-.footer-nl-row{ display:flex; gap:0; border:1px solid var(--border-bright); border-radius:4px; overflow:hidden; }
-.footer-nl-row input{
-  flex:1; background:rgba(14,16,24,.85); border:none; color:var(--text-primary);
-  font-family:'Share Tech Mono', monospace; font-size:10px; letter-spacing:.8px; padding:9px 12px; outline:none;
-}
-.footer-nl-row button{
-  background:linear-gradient(135deg, var(--gold-700), var(--gold-500), var(--gold-300));
-  border:none; color:#081428; padding:9px 14px; font-family:'Share Tech Mono', monospace;
-  font-size:9px; letter-spacing:1.5px; text-transform:uppercase; font-weight:700;
-}
-.footer-bottom{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-top:1.5rem; border-top:1px solid var(--border-dim); flex-wrap:wrap; }
-.footer-copy{ font-family:'Share Tech Mono', monospace; font-size:9.5px; letter-spacing:1px; color:var(--text-dim); }
-.footer-copy strong{ color:var(--text-secondary); }
-.footer-legal-links{ display:flex; align-items:center; gap:10px; font-family:'Share Tech Mono', monospace; font-size:9.5px; letter-spacing:1px; }
-.footer-legal-links a{ color:var(--text-dim); transition:color .15s; }
-.footer-legal-links a:hover{ color:var(--gold-400); }
-.footer-legal-links span{ color:var(--text-dim); opacity:.4; }
-
-/* Cart toast */
-.cart-toast{
-  position:fixed; bottom:24px; right:24px; z-index:999;
-  background:var(--panel); border:1px solid var(--border-bright);
-  color:var(--text-primary); padding:12px 20px; border-radius:6px; font-size:13px;
-  opacity:0; transform:translateY(10px); transition:all .3s; pointer-events:none;
-  font-family:'Exo 2', sans-serif; max-width:300px;
-  box-shadow:var(--glow-gold), 0 8px 32px rgba(0,0,0,.6); backdrop-filter:blur(12px);
-}
-.cart-toast::before{ content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg, transparent, var(--gold-400), transparent); }
-.cart-toast.show{ opacity:1; transform:translateY(0); }
-
-/* ════════════════════════════════════════════════════════════
-   RESPONSIVE
-   ════════════════════════════════════════════════════════════ */
-@media (max-width:1024px){
-  .heaven-inner{ grid-template-columns:1fr; gap:2.5rem; padding:4rem 1.5rem; }
-  .heaven-hero{ min-height:auto; }
-  .htp-grid{ grid-template-columns:1fr; gap:16px; }
-  .footer-grid{ grid-template-columns:1fr 1fr; }
-}
-@media (max-width:768px){
-  .product-grid{ grid-template-columns:repeat(2, 1fr); gap:10px; }
-  .header-top-inner{ flex-wrap:wrap; gap:8px; }
-  .search-wrap{ max-width:100%; width:100%; order:2; }
-  .top-actions{ order:1; margin-left:auto; }
-  nav{ gap:1px; }
-  .nav-item{ font-size:9px; padding:5px 7px; }
-  .footer-banner{ flex-direction:column; }
-  .footer-grid{ grid-template-columns:1fr 1fr; gap:1.5rem; }
-  .footer-bottom{ flex-direction:column; text-align:center; }
-}
-@media (max-width:480px){
-  .heaven-ctas{ flex-direction:column; align-items:stretch; }
-  .heaven-trust{ gap:14px; }
-}
-</style>
+<link rel="stylesheet" href="shared.css" />
 </head>
 <body>
-
-<!-- TICKER -->
-<div class="ticker-bar">
-  <div class="ticker-inner">
-    <span class="t-live"><span class="pulse"></span>LIVE DEALS</span>
-    <span>✦ Steam ₨5000 — Save 4% &nbsp;✦ PSN ₨3000 — ₨3,100 &nbsp;✦ Xbox ₨1000 — ₨1,050 &nbsp;✦ Amazon ₨1000 — NEW &nbsp;✦ Roblox 400 Robux — ₨480</span>
-    <span class="t-live"><span class="pulse"></span>LIVE DEALS</span>
-    <span>✦ Steam ₨5000 — Save 4% &nbsp;✦ PSN ₨3000 — ₨3,100 &nbsp;✦ Xbox ₨1000 — ₨1,050 &nbsp;✦ Amazon ₨1000 — NEW &nbsp;✦ Roblox 400 Robux — ₨480</span>
-  </div>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="header-top">
-    <div class="header-top-inner">
-      <div class="search-wrap">
-        <div class="search-bar">
-          <select class="search-category">
-            <option>All</option>
-            <option>Games</option>
-            <option>AI Tools</option>
-            <option>Software</option>
-            <option>Gift Cards</option>
-            <option>Subscriptions</option>
-            <option>Top Up</option>
-            <option>Accounts</option>
-          </select>
-          <span class="search-ico">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </span>
-          <input class="search-input" type="text" placeholder="Search games, gift cards, subscriptions…" autocomplete="off" />
-          <button class="search-btn">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Search
-          </button>
-        </div>
-      </div>
-      <div class="top-actions">
-        <button class="btn-wish" aria-label="Wishlist">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
-        <button class="btn-login">Sign In</button>
-        <button class="btn-prime">✦ Join PlayBeat</button>
-      </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span class="t-live"><span class="pulse"></span>LIVE DEALS</span>
+      <span>✦ ChatGPT Plus — PKR 5,999 &nbsp;✦ Netflix 4K — PKR 699 &nbsp;✦ PUBG UC 1800 — PKR 1,799 &nbsp;✦ Steam Wallet ₨5000 — PKR 5,200 &nbsp;✦ Valorant Elderflame — PKR 7,999 &nbsp;✦ MS Office 365 — PKR 2,499 &nbsp;✦ Midjourney — PKR 2,999 &nbsp;✦ Free Fire 1000💎 — PKR 1,499</span>
+      <span class="t-live"><span class="pulse"></span>LIVE DEALS</span>
+      <span>✦ ChatGPT Plus — PKR 5,999 &nbsp;✦ Netflix 4K — PKR 699 &nbsp;✦ PUBG UC 1800 — PKR 1,799 &nbsp;✦ Steam Wallet ₨5000 — PKR 5,200 &nbsp;✦ Valorant Elderflame — PKR 7,999 &nbsp;✦ MS Office 365 — PKR 2,499 &nbsp;✦ Midjourney — PKR 2,999 &nbsp;✦ Free Fire 1000💎 — PKR 1,499</span>
     </div>
   </div>
-  <div class="header-inner">
-    <a class="logo" href="index.html">
-      <span class="logo-digital">Digital</span>
-      <div class="logo-wordmark">
-        <span class="logo-play">play</span><span class="logo-beat">beat</span>
+  <header>
+    <div class="header-top">
+      <div class="header-top-inner">
+        <div class="search-wrap">
+          <div class="search-bar">
+            <select class="search-category">
+              <option>All</option>
+              <option>Games</option>
+              <option>AI Tools</option>
+              <option>Software</option>
+              <option>Gift Cards</option>
+              <option>Subscriptions</option>
+              <option>Top Up</option>
+              <option>Accounts</option>
+            </select>
+            <span class="search-ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <input class="search-input" type="text" placeholder="Search games, gift cards, subscriptions…" id="heroSearch" autocomplete="off" />
+            <button class="search-btn" onclick="PB.doSearch(document.getElementById('heroSearch'))"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Search</button>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="btn-wish" aria-label="Wishlist" onclick="PB.wishlistPrompt()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <button class="btn-login" onclick="PB.signIn()">Sign In</button>
+          <button class="btn-prime" onclick="PB.joinPlayBeat()">✦ Join PlayBeat</button>
+        </div>
       </div>
-      <div class="logo-pvt">Digital Pvt Ltd</div>
-      <div class="logo-underline"></div>
-    </a>
-    <nav>
-      <a href="index.html" class="nav-item">Home</a>
+    </div>
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="PlayBeat Digital home">
+        <span class="logo-digital">Digital</span>
+        <div class="logo-wordmark">
+          <span class="logo-play">play</span><span class="logo-beat">beat</span>
+        </div>
+        <div class="logo-pvt">Digital Pvt Ltd</div>
+        <div class="logo-underline"></div>
+      </a>
+      <nav aria-label="Main navigation">
+      <a href="index.html" class="nav-item active">Home</a>
       <a href="games.html" class="nav-item">Games</a>
-      <a href="gift-cards.html" class="nav-item active">Gift Cards</a>
+      <a href="gift-cards.html" class="nav-item">Gift Cards</a>
       <a href="software.html" class="nav-item">Software</a>
       <a href="ai-tools.html" class="nav-item">AI Tools</a>
       <a href="game-items.html" class="nav-item">Game Items</a>
@@ -733,417 +67,392 @@ nav{ display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
       <div class="nav-sep"></div>
       <a href="trending.html" class="nav-item nav-special">✦ Trending</a>
       <a href="best-value.html" class="nav-item nav-outsource">◈ Global</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO — THE ULTIMATE HEAVEN -->
-<section class="heaven-hero" aria-label="Hero">
-  <div class="mote" style="top:18%; left:42%;"></div>
-  <div class="mote" style="top:62%; left:30%; animation-delay:3s;"></div>
-  <div class="mote" style="top:35%; left:64%; animation-delay:6s;"></div>
-  <div class="mote" style="top:78%; left:52%; animation-delay:9s;"></div>
-  <div class="mote" style="top:12%; left:8%; animation-delay:5s;"></div>
-
-  <div class="heaven-inner">
-    <div class="heaven-left">
-      <div class="heaven-eyebrow">
-        <span class="dot"></span>
-        Pakistan's Premium Digital Marketplace
-      </div>
-      <h1>
-        <span class="l1">PlayBeat Digital</span>
-        <span class="l2">The Ultimate Heaven</span>
-      </h1>
-      <div class="heaven-rule"></div>
-      <p class="heaven-sub">
-        A realm of <b>games, AI tools, software &amp; subscriptions</b> — curated,
-        instant, and priced for Pakistan. Step inside the gates of digital heaven.
-      </p>
-      <div class="heaven-ctas">
-        <a href="trending.html" class="cta-gold">✦ Enter Heaven</a>
-        <a href="ai-tools.html" class="cta-silver">🤖 AI Tools</a>
-      </div>
-      <div class="heaven-trust">
-        <div class="heaven-trust-item">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Instant Delivery
-        </div>
-        <div class="heaven-trust-item">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Buyer Protection
-        </div>
-        <div class="heaven-trust-item">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          24/7 Support
-        </div>
-      </div>
-    </div>
-
-    <div class="heaven-panel">
-      <div class="hp-label">
-        <span class="live"></span>
-        Live Store Stats
-      </div>
-      <div class="emblem-stage">
-        <div class="emblem-ring r1"></div>
-        <div class="emblem-ring r2"></div>
-        <div class="emblem-ring r3"></div>
-        <div class="emblem-core">HEAVEN</div>
-        <div class="emblem-dot" style="top:6px; left:50%;"></div>
-        <div class="emblem-dot" style="bottom:26px; right:14px;"></div>
-        <div class="emblem-dot" style="top:50%; left:4px;"></div>
-      </div>
-      <div class="hp-stats">
-        <div class="hp-stat"><div class="val">50k+</div><div class="lbl">Happy Customers</div></div>
-        <div class="hp-stat"><div class="val">500+</div><div class="lbl">Products</div></div>
-        <div class="hp-stat"><div class="val">⚡</div><div class="lbl">Instant Delivery</div></div>
-        <div class="hp-stat"><div class="val">4.9★</div><div class="lbl">Avg Rating</div></div>
-      </div>
-      <div class="hp-curated">
-        <div class="hp-curated-label">Heaven's Picks</div>
-        <div class="hp-chip"><span class="hp-chip-name">💬 ChatGPT Plus — 1 Month</span><span class="hp-chip-price">PKR 5,999</span></div>
-        <div class="hp-chip"><span class="hp-chip-name">📺 Netflix Premium 4K</span><span class="hp-chip-price">PKR 699</span></div>
-        <div class="hp-chip"><span class="hp-chip-name">🖼️ Midjourney Basic</span><span class="hp-chip-price">PKR 2,999</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOT · TRENDING · POPULAR -->
-<section class="htp-section">
-  <div class="wrap">
-    <div class="section-header">
-      <div>
-        <div class="section-eyebrow">Right Now in Heaven</div>
-        <h2 class="section-title">Hot · Trending · Popular</h2>
-      </div>
-      <a href="trending.html" class="section-link">View all →</a>
-    </div>
-    <div class="htp-grid">
-      <div class="htp-col">
-        <div class="htp-col-head">
-          <span class="htp-icon">🔥</span>
-          <span class="htp-col-title">Hot</span>
-          <span class="htp-col-tag">Limited</span>
-        </div>
-        <a href="gift-cards.html" class="htp-item"><span class="htp-num">01</span><span class="htp-emoji">🎯</span><div class="htp-info"><div class="htp-name">Steam ₨5000 — Sale</div><div class="htp-price">₨5,200</div></div></a>
-        <a href="ai-tools.html" class="htp-item"><span class="htp-num">02</span><span class="htp-emoji">💬</span><div class="htp-info"><div class="htp-name">ChatGPT Plus — 1 Month</div><div class="htp-price">PKR 5,999</div></div></a>
-        <a href="top-up.html" class="htp-item"><span class="htp-num">03</span><span class="htp-emoji">🎯</span><div class="htp-info"><div class="htp-name">PUBG Mobile UC — 1800</div><div class="htp-price">PKR 1,799</div></div></a>
-      </div>
-      <div class="htp-col">
-        <div class="htp-col-head">
-          <span class="htp-icon">📈</span>
-          <span class="htp-col-title">Trending</span>
-          <span class="htp-col-tag">Today</span>
-        </div>
-        <a href="subscriptions.html" class="htp-item"><span class="htp-num">01</span><span class="htp-emoji">📺</span><div class="htp-info"><div class="htp-name">Netflix Premium 4K — 1 Mo</div><div class="htp-price">PKR 699</div></div></a>
-        <a href="gift-cards.html" class="htp-item"><span class="htp-num">02</span><span class="htp-emoji">🎮</span><div class="htp-info"><div class="htp-name">PSN ₨3000</div><div class="htp-price">₨3,100</div></div></a>
-        <a href="gift-cards.html" class="htp-item"><span class="htp-num">03</span><span class="htp-emoji">📦</span><div class="htp-info"><div class="htp-name">Amazon ₨1000 — New</div><div class="htp-price">₨1,100</div></div></a>
-      </div>
-      <div class="htp-col">
-        <div class="htp-col-head">
-          <span class="htp-icon">⭐</span>
-          <span class="htp-col-title">Popular</span>
-          <span class="htp-col-tag">All Time</span>
-        </div>
-        <a href="gift-cards.html" class="htp-item"><span class="htp-num">01</span><span class="htp-emoji">🟥</span><div class="htp-info"><div class="htp-name">Roblox 400 Robux</div><div class="htp-price">₨480</div></div></a>
-        <a href="gift-cards.html" class="htp-item"><span class="htp-num">02</span><span class="htp-emoji">🎯</span><div class="htp-info"><div class="htp-name">Steam ₨1000</div><div class="htp-price">₨1,050</div></div></a>
-        <a href="gift-cards.html" class="htp-item"><span class="htp-num">03</span><span class="htp-emoji">💚</span><div class="htp-info"><div class="htp-name">Xbox ₨500</div><div class="htp-price">₨520</div></div></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GIFT CARDS PRODUCT GRID -->
-<div class="wrap" style="padding:32px 0 60px;">
-  <div class="cat-banner">
-    <h1>🎁 Gift Cards</h1>
-    <p>All prices in PKR · Instant digital delivery · 100% authentic</p>
-  </div>
-  <div class="product-grid">
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="steam-500" onclick="PB.toggleWish('steam-500','Steam ₨500')">♡</button>
-      <div class="product-card-img">🎯</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Steam</div>
-        <div class="product-card-name">Steam ₨500</div>
-        <div class="price">₨520</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'steam-500',name:'Steam ₨500',price:'₨520',emoji:'🎯'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="steam-1k" onclick="PB.toggleWish('steam-1k','Steam ₨1000')">♡</button>
-      <div class="product-card-img">🎯</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Steam</div>
-        <div class="product-card-name">Steam ₨1000</div>
-        <div class="price">₨1,050</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'steam-1k',name:'Steam ₨1000',price:'₨1,050',emoji:'🎯'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="steam-2k" onclick="PB.toggleWish('steam-2k','Steam ₨2000')">♡</button>
-      <div class="product-card-img">🎯</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Steam</div>
-        <div class="product-card-name">Steam ₨2000</div>
-        <div class="price">₨2,100</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'steam-2k',name:'Steam ₨2000',price:'₨2,100',emoji:'🎯'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <span class="badge-sale">SALE</span>
-      <button class="wishlist-btn" data-id="steam-5k" onclick="PB.toggleWish('steam-5k','Steam ₨5000')">♡</button>
-      <div class="product-card-img">🎯</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Steam</div>
-        <div class="product-card-name">Steam ₨5000</div>
-        <div class="price">₨5,200</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'steam-5k',name:'Steam ₨5000',price:'₨5,200',emoji:'🎯'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="psn-1k" onclick="PB.toggleWish('psn-1k','PSN ₨1000')">♡</button>
-      <div class="product-card-img">🎮</div>
-      <div class="product-card-body">
-        <div class="product-card-game">PlayStation</div>
-        <div class="product-card-name">PSN ₨1000</div>
-        <div class="price">₨1,050</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'psn-1k',name:'PSN ₨1000',price:'₨1,050',emoji:'🎮'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="psn-3k" onclick="PB.toggleWish('psn-3k','PSN ₨3000')">♡</button>
-      <div class="product-card-img">🎮</div>
-      <div class="product-card-body">
-        <div class="product-card-game">PlayStation</div>
-        <div class="product-card-name">PSN ₨3000</div>
-        <div class="price">₨3,100</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'psn-3k',name:'PSN ₨3000',price:'₨3,100',emoji:'🎮'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="xbox-500" onclick="PB.toggleWish('xbox-500','Xbox ₨500')">♡</button>
-      <div class="product-card-img">💚</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Xbox</div>
-        <div class="product-card-name">Xbox ₨500</div>
-        <div class="price">₨520</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'xbox-500',name:'Xbox ₨500',price:'₨520',emoji:'💚'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="xbox-1k" onclick="PB.toggleWish('xbox-1k','Xbox ₨1000')">♡</button>
-      <div class="product-card-img">💚</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Xbox</div>
-        <div class="product-card-name">Xbox ₨1000</div>
-        <div class="price">₨1,050</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'xbox-1k',name:'Xbox ₨1000',price:'₨1,050',emoji:'💚'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="google-500" onclick="PB.toggleWish('google-500','Google Play ₨500')">♡</button>
-      <div class="product-card-img">▶</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Google</div>
-        <div class="product-card-name">Google Play ₨500</div>
-        <div class="price">₨520</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'google-500',name:'Google Play ₨500',price:'₨520',emoji:'▶'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="itunes-1k" onclick="PB.toggleWish('itunes-1k','iTunes ₨1000')">♡</button>
-      <div class="product-card-img">🍎</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Apple</div>
-        <div class="product-card-name">iTunes ₨1000</div>
-        <div class="price">₨1,050</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'itunes-1k',name:'iTunes ₨1000',price:'₨1,050',emoji:'🍎'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <span class="badge-new">NEW</span>
-      <button class="wishlist-btn" data-id="amazon-1k" onclick="PB.toggleWish('amazon-1k','Amazon ₨1000')">♡</button>
-      <div class="product-card-img">📦</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Amazon</div>
-        <div class="product-card-name">Amazon ₨1000</div>
-        <div class="price">₨1,100</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'amazon-1k',name:'Amazon ₨1000',price:'₨1,100',emoji:'📦'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card card-silver-glow">
-      <button class="wishlist-btn" data-id="roblox-400" onclick="PB.toggleWish('roblox-400','Roblox 400 Robux')">♡</button>
-      <div class="product-card-img">🟥</div>
-      <div class="product-card-body">
-        <div class="product-card-game">Roblox</div>
-        <div class="product-card-name">Roblox 400 Robux</div>
-        <div class="price">₨480</div>
-        <div class="product-offers">
-          <button class="add-cart-btn" onclick="PB.addToCart({id:'roblox-400',name:'Roblox 400 Robux',price:'₨480',emoji:'🟥'})">+ Cart</button>
-          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-banner">
-      <a class="footer-logo" href="index.html">
-        <span class="footer-logo-digital">Digital</span>
-        <div class="footer-logo-wordmark">
-          <span class="footer-logo-play">play</span><span class="footer-logo-beat">beat</span>
-        </div>
-        <div class="footer-logo-pvt">Digital Pvt Ltd</div>
-        <div class="footer-logo-line"></div>
-        <p class="footer-tagline">Driven by <span class="ft-play">Play</span>, Defined by <span class="ft-beat">beat.</span></p>
-      </a>
-      <div class="footer-support">
-        <span class="support-label">Support</span>
-        <a class="btn-support email" href="mailto:support@playbeat.gg">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          Email
-        </a>
-        <a class="btn-support whatsapp" href="https://wa.me/923318333368" target="_blank" rel="noopener">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-          WhatsApp
-        </a>
-        <a class="btn-support telegram" href="https://t.me/playbeat" target="_blank" rel="noopener">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-          Telegram
-        </a>
-      </div>
-    </div>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3 class="footer-col-title">Marketplace</h3>
-        <div class="footer-nav-grid">
-          <a href="index.html" class="footer-nav-link">🏠 Home</a>
-          <a href="games.html" class="footer-nav-link">🎮 Games</a>
-          <a href="gift-cards.html" class="footer-nav-link">🎁 Gift Cards</a>
-          <a href="software.html" class="footer-nav-link">💻 Software</a>
-          <a href="ai-tools.html" class="footer-nav-link">🤖 AI Tools</a>
-          <a href="game-items.html" class="footer-nav-link">⚔️ Game Items</a>
-          <a href="accounts.html" class="footer-nav-link">👤 Accounts</a>
-          <a href="subscriptions.html" class="footer-nav-link">📺 Subscriptions</a>
-          <a href="top-up.html" class="footer-nav-link">💎 Top Up</a>
-          <a href="trending.html" class="footer-nav-link special">✦ Trending</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h3 class="footer-col-title">Discover</h3>
-        <ul class="footer-link-list">
-          <li><a href="trending.html">✦ Trending</a></li>
-          <li><a href="best-value.html">◈ Best Value</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3 class="footer-col-title">Legal</h3>
-        <ul class="footer-link-list">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
-          <li><a href="refund.html">Refund Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3 class="footer-col-title">Newsletter</h3>
-        <p style="font-family:'Exo 2',sans-serif;font-size:11.5px;color:var(--text-dim);line-height:1.75;margin-bottom:14px;">Exclusive deals, flash sales, and new arrivals straight to your inbox.</p>
-        <div class="footer-nl-row">
-          <input type="email" placeholder="your@email.com" />
-          <button>Subscribe</button>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© <span id="yr"></span> <strong>PlayBeat Digital (Pvt) Ltd</strong> — All rights reserved. Prices in PKR. Reg. No. 00681011050474</p>
-      <nav class="footer-legal-links">
-        <a href="privacy.html">Privacy</a><span>·</span>
-        <a href="terms.html">Terms</a><span>·</span>
-        <a href="refund.html">Refunds</a><span>·</span>
-        <a href="contact.html">Contact</a>
       </nav>
     </div>
+  </header>
+  <section class="heaven-hero" aria-label="Hero">
+    <div class="mote" style="top:18%; left:42%;"></div>
+    <div class="mote" style="top:62%; left:30%; animation-delay:3s;"></div>
+    <div class="mote" style="top:35%; left:64%; animation-delay:6s;"></div>
+    <div class="mote" style="top:78%; left:52%; animation-delay:9s;"></div>
+    <div class="mote" style="top:12%; left:8%; animation-delay:5s;"></div>
+
+    <div class="heaven-inner">
+      <div class="heaven-left">
+        <div class="heaven-eyebrow">
+          <span class="dot"></span>
+          Pakistan's Premium Digital Marketplace
+        </div>
+        <h1>
+          <span class="l1">PlayBeat Digital</span>
+          <span class="l2">The Ultimate Heaven</span>
+        </h1>
+        <div class="heaven-rule"></div>
+        <p class="heaven-sub">
+          A realm of <b>games, AI tools, software &amp; subscriptions</b> — curated,
+          instant, and priced for Pakistan. Step inside the gates of digital heaven.
+        </p>
+        <div class="heaven-ctas">
+          <a href="trending.html" class="cta-gold">✦ Enter Heaven</a>
+          <a href="ai-tools.html" class="cta-silver">🤖 AI Tools</a>
+        </div>
+        <div class="heaven-trust">
+          <div class="heaven-trust-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Instant Delivery</div>
+          <div class="heaven-trust-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Buyer Protection</div>
+          <div class="heaven-trust-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Support</div>
+        </div>
+      </div>
+
+      <div class="heaven-panel">
+        <div class="hp-label">
+          <span class="live"></span>
+          Live Store Stats
+        </div>
+        <div class="emblem-stage">
+          <div class="emblem-ring r1"></div>
+          <div class="emblem-ring r2"></div>
+          <div class="emblem-ring r3"></div>
+          <div class="emblem-core">HEAVEN</div>
+          <div class="emblem-dot" style="top:6px; left:50%;"></div>
+          <div class="emblem-dot" style="bottom:26px; right:14px;"></div>
+          <div class="emblem-dot" style="top:50%; left:4px;"></div>
+        </div>
+        <div class="hp-stats">
+          <div class="hp-stat"><div class="val">50k+</div><div class="lbl">Happy Customers</div></div>
+          <div class="hp-stat"><div class="val">500+</div><div class="lbl">Products</div></div>
+          <div class="hp-stat"><div class="val">⚡</div><div class="lbl">Instant Delivery</div></div>
+          <div class="hp-stat"><div class="val">4.9★</div><div class="lbl">Avg Rating</div></div>
+        </div>
+        <div class="hp-curated">
+          <div class="hp-curated-label">Heaven's Picks</div>
+          <a href="ai-tools.html" class="hp-chip" style="text-decoration:none;"><span class="hp-chip-name">💬 ChatGPT Plus — 1 Month</span><span class="hp-chip-price">PKR 5,999</span></a>
+          <a href="subscriptions.html" class="hp-chip" style="text-decoration:none;"><span class="hp-chip-name">📺 Netflix Premium 4K</span><span class="hp-chip-price">PKR 699</span></a>
+          <a href="ai-tools.html" class="hp-chip" style="text-decoration:none;"><span class="hp-chip-name">🖼️ Midjourney Basic</span><span class="hp-chip-price">PKR 2,999</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="htp-section">
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <div class="section-eyebrow">Right Now in Heaven</div>
+          <h2 class="section-title">Hot · Trending · Popular</h2>
+        </div>
+        <a href="trending.html" class="section-link">View all <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <div class="htp-grid">
+        <div class="htp-col">
+          <div class="htp-col-head">
+            <span class="htp-icon">🔥</span>
+            <span class="htp-col-title">Hot</span>
+            <span class="htp-col-tag">Limited</span>
+          </div>
+          <a href="gift-cards.html" class="htp-item"><span class="htp-num">01</span><span class="htp-emoji">🎯</span><div class="htp-info"><div class="htp-name">Steam Wallet ₨5000 — Sale</div><div class="htp-price">PKR 5,200</div></div></a>
+          <a href="ai-tools.html" class="htp-item"><span class="htp-num">02</span><span class="htp-emoji">💬</span><div class="htp-info"><div class="htp-name">ChatGPT Plus — 1 Month</div><div class="htp-price">PKR 5,999</div></div></a>
+          <a href="top-up.html" class="htp-item"><span class="htp-num">03</span><span class="htp-emoji">🎯</span><div class="htp-info"><div class="htp-name">PUBG Mobile UC — 1800</div><div class="htp-price">PKR 1,799</div></div></a>
+        </div>
+        <div class="htp-col">
+          <div class="htp-col-head">
+            <span class="htp-icon">📈</span>
+            <span class="htp-col-title">Trending</span>
+            <span class="htp-col-tag">Today</span>
+          </div>
+          <a href="subscriptions.html" class="htp-item"><span class="htp-num">01</span><span class="htp-emoji">📺</span><div class="htp-info"><div class="htp-name">Netflix Premium 4K — 1 Mo</div><div class="htp-price">PKR 699</div></div></a>
+          <a href="games.html" class="htp-item"><span class="htp-num">02</span><span class="htp-emoji">⚡</span><div class="htp-info"><div class="htp-name">Valorant Elderflame Bundle</div><div class="htp-price">PKR 7,999</div></div></a>
+          <a href="game-items.html" class="htp-item"><span class="htp-num">03</span><span class="htp-emoji">🔫</span><div class="htp-info"><div class="htp-name">CS2 AK-47 Redline</div><div class="htp-price">PKR 3,999</div></div></a>
+        </div>
+        <div class="htp-col">
+          <div class="htp-col-head">
+            <span class="htp-icon">⭐</span>
+            <span class="htp-col-title">Popular</span>
+            <span class="htp-col-tag">All Time</span>
+          </div>
+          <a href="gift-cards.html" class="htp-item"><span class="htp-num">01</span><span class="htp-emoji">🟥</span><div class="htp-info"><div class="htp-name">Roblox 400 Robux</div><div class="htp-price">PKR 480</div></div></a>
+          <a href="software.html" class="htp-item"><span class="htp-num">02</span><span class="htp-emoji">🪟</span><div class="htp-info"><div class="htp-name">Windows 11 Pro</div><div class="htp-price">PKR 3,999</div></div></a>
+          <a href="accounts.html" class="htp-item"><span class="htp-num">03</span><span class="htp-emoji">🏅</span><div class="htp-info"><div class="htp-name">PUBG Conqueror Account</div><div class="htp-price">PKR 14,999</div></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="wrap" style="padding:3.5rem 0 0;">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Curated For You</div>
+        <h2 class="section-title">Featured This Week</h2>
+      </div>
+      <a href="trending.html" class="section-link">View all <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    </div>
+    <div class="product-grid" id="productGrid">
+    <div class="product-card card-silver-glow" data-price="5999" data-index="0">
+      <span class="badge-sale">AI HOT</span>
+      <button class="wishlist-btn" data-id="chatgpt-plus---1-month" onclick="PB.toggleWish('chatgpt-plus---1-month','ChatGPT Plus — 1 Month')">♡</button>
+      <div class="product-card-img">💬</div>
+      <div class="product-card-body">
+        <div class="product-card-game">AI Tools</div>
+        <div class="product-card-name">ChatGPT Plus — 1 Month</div>
+        <div class="price">PKR 5,999</div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'chatgpt-plus---1-month',name:'ChatGPT Plus — 1 Month',price:'PKR 5,999',emoji:'💬'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="699" data-index="1">
+      <span class="badge-sale">HOT</span>
+      <button class="wishlist-btn" data-id="netflix-premium-4k---1-month" onclick="PB.toggleWish('netflix-premium-4k---1-month','Netflix Premium 4K — 1 Month')">♡</button>
+      <div class="product-card-img">📺</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Subscriptions</div>
+        <div class="product-card-name">Netflix Premium 4K — 1 Month</div>
+        <div class="price">PKR 699</div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'netflix-premium-4k---1-month',name:'Netflix Premium 4K — 1 Month',price:'PKR 699',emoji:'📺'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="1799" data-index="2">
+      <span class="badge-sale">POPULAR</span>
+      <button class="wishlist-btn" data-id="pubg-mobile-uc---1800-uc" onclick="PB.toggleWish('pubg-mobile-uc---1800-uc','PUBG Mobile UC — 1800 UC')">♡</button>
+      <div class="product-card-img">🎯</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Top Up</div>
+        <div class="product-card-name">PUBG Mobile UC — 1800 UC</div>
+        <div class="price">PKR 1,799</div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'pubg-mobile-uc---1800-uc',name:'PUBG Mobile UC — 1800 UC',price:'PKR 1,799',emoji:'🎯'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="2499" data-index="3">
+      <span class="badge-sale">SALE</span>
+      <button class="wishlist-btn" data-id="ms-office-365-personal---1yr" onclick="PB.toggleWish('ms-office-365-personal---1yr','MS Office 365 Personal — 1yr')">♡</button>
+      <div class="product-card-img">📄</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Software</div>
+        <div class="product-card-name">MS Office 365 Personal — 1yr</div>
+        <div class="price-row"><div class="price">PKR 2,499</div><div class="price-old">PKR 4,999</div></div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'ms-office-365-personal---1yr',name:'MS Office 365 Personal — 1yr',price:'PKR 2,499',emoji:'📄'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="5200" data-index="4">
+      <span class="badge-sale">SALE</span>
+      <button class="wishlist-btn" data-id="steam-wallet-5000" onclick="PB.toggleWish('steam-wallet-5000','Steam Wallet ₨5000')">♡</button>
+      <div class="product-card-img">🎯</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Gift Cards</div>
+        <div class="product-card-name">Steam Wallet ₨5000</div>
+        <div class="price-row"><div class="price">PKR 5,200</div><div class="price-old">PKR 5,499</div></div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'steam-wallet-5000',name:'Steam Wallet ₨5000',price:'PKR 5,200',emoji:'🎯'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="1499" data-index="5">
+      <button class="wishlist-btn" data-id="free-fire---1000-diamonds" onclick="PB.toggleWish('free-fire---1000-diamonds','Free Fire — 1000 Diamonds')">♡</button>
+      <div class="product-card-img">🔥</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Top Up</div>
+        <div class="product-card-name">Free Fire — 1000 Diamonds</div>
+        <div class="price">PKR 1,499</div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'free-fire---1000-diamonds',name:'Free Fire — 1000 Diamonds',price:'PKR 1,499',emoji:'🔥'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="7999" data-index="6">
+      <span class="badge-sale">⚡ FLASH</span>
+      <button class="wishlist-btn" data-id="valorant-elderflame-bundle" onclick="PB.toggleWish('valorant-elderflame-bundle','Valorant Elderflame Bundle')">♡</button>
+      <div class="product-card-img">⚡</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Games</div>
+        <div class="product-card-name">Valorant Elderflame Bundle</div>
+        <div class="price-row"><div class="price">PKR 7,999</div><div class="price-old">PKR 11,499</div></div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'valorant-elderflame-bundle',name:'Valorant Elderflame Bundle',price:'PKR 7,999',emoji:'⚡'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="499" data-index="7">
+      <span class="badge-sale">SAVE 16%</span>
+      <button class="wishlist-btn" data-id="spotify-premium---3-months" onclick="PB.toggleWish('spotify-premium---3-months','Spotify Premium — 3 Months')">♡</button>
+      <div class="product-card-img">🎵</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Subscriptions</div>
+        <div class="product-card-name">Spotify Premium — 3 Months</div>
+        <div class="price-row"><div class="price">PKR 499</div><div class="price-old">PKR 597</div></div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'spotify-premium---3-months',name:'Spotify Premium — 3 Months',price:'PKR 499',emoji:'🎵'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="3999" data-index="8">
+      <span class="badge-new">NEW LOW</span>
+      <button class="wishlist-btn" data-id="windows-11-pro---digital-key" onclick="PB.toggleWish('windows-11-pro---digital-key','Windows 11 Pro — Digital Key')">♡</button>
+      <div class="product-card-img">🪟</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Software</div>
+        <div class="product-card-name">Windows 11 Pro — Digital Key</div>
+        <div class="price-row"><div class="price">PKR 3,999</div><div class="price-old">PKR 5,999</div></div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'windows-11-pro---digital-key',name:'Windows 11 Pro — Digital Key',price:'PKR 3,999',emoji:'🪟'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="1999" data-index="9">
+      <span class="badge-sale">HOT</span>
+      <button class="wishlist-btn" data-id="xbox-game-pass-ultimate---1-month" onclick="PB.toggleWish('xbox-game-pass-ultimate---1-month','Xbox Game Pass Ultimate — 1 Month')">♡</button>
+      <div class="product-card-img">🟩</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Subscriptions</div>
+        <div class="product-card-name">Xbox Game Pass Ultimate — 1 Month</div>
+        <div class="price">PKR 1,999</div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'xbox-game-pass-ultimate---1-month',name:'Xbox Game Pass Ultimate — 1 Month',price:'PKR 1,999',emoji:'🟩'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="2999" data-index="10">
+      <span class="badge-new">AI</span>
+      <button class="wishlist-btn" data-id="midjourney-basic---1-month" onclick="PB.toggleWish('midjourney-basic---1-month','Midjourney Basic — 1 Month')">♡</button>
+      <div class="product-card-img">🖼️</div>
+      <div class="product-card-body">
+        <div class="product-card-game">AI Tools</div>
+        <div class="product-card-name">Midjourney Basic — 1 Month</div>
+        <div class="price">PKR 2,999</div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'midjourney-basic---1-month',name:'Midjourney Basic — 1 Month',price:'PKR 2,999',emoji:'🖼️'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card card-silver-glow" data-price="349" data-index="11">
+      <button class="wishlist-btn" data-id="mobile-legends---86-diamonds" onclick="PB.toggleWish('mobile-legends---86-diamonds','Mobile Legends — 86 Diamonds')">♡</button>
+      <div class="product-card-img">⚔️</div>
+      <div class="product-card-body">
+        <div class="product-card-game">Top Up</div>
+        <div class="product-card-name">Mobile Legends — 86 Diamonds</div>
+        <div class="price">PKR 349</div>
+        <div class="product-offers">
+          <button class="add-cart-btn" onclick="PB.addToCart({id:'mobile-legends---86-diamonds',name:'Mobile Legends — 86 Diamonds',price:'PKR 349',emoji:'⚔️'})">+ Cart</button>
+          <button class="buy-btn" onclick="location='/checkout'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="promo-pair">
+      <div class="promo-card prime">
+        <span class="promo-icon">🤖</span>
+        <div class="promo-tag">AI Tools</div>
+        <div class="promo-title">Power Up With AI</div>
+        <p class="promo-sub">ChatGPT, Midjourney, Claude Pro &amp; Gemini Advanced — activated on your own account within minutes.</p>
+        <a href="ai-tools.html" class="promo-btn">Explore AI Tools <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+      <div class="promo-card silver">
+        <span class="promo-icon">📺</span>
+        <div class="promo-tag">Subscriptions</div>
+        <div class="promo-title">Stream Without Limits</div>
+        <p class="promo-sub">Netflix, Disney+, Spotify &amp; Xbox Game Pass — every screen, every show, one marketplace.</p>
+        <a href="subscriptions.html" class="promo-btn">Browse Subscriptions <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+      </div>
+    </div>
   </div>
-</footer>
+  <div class="newsletter-section">
+    <div class="newsletter-box">
+      <div class="nl-text">
+        <div class="nl-title">Never Miss a Drop</div>
+        <div class="nl-sub">Flash sales, new arrivals, and PlayBeat-only discounts — straight to your inbox.</div>
+      </div>
+      <div class="nl-form">
+        <input class="nl-input" type="email" id="heroEmail" placeholder="your@email.com" />
+        <button class="nl-btn" onclick="PB.subscribe('heroEmail')">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-banner">
+        <a class="footer-logo" href="index.html" aria-label="PlayBeat Digital home">
+          <span class="footer-logo-digital">Digital</span>
+          <div class="footer-logo-wordmark">
+            <span class="footer-logo-play">play</span><span class="footer-logo-beat">beat</span>
+          </div>
+          <div class="footer-logo-pvt">Digital Pvt Ltd</div>
+          <div class="footer-logo-line"></div>
+          <p class="footer-tagline">Driven by <span class="ft-play">Play</span>, Defined by <span class="ft-beat">beat.</span></p>
+        </a>
+        <div class="footer-support">
+          <span class="support-label">Support</span>
+          <a class="btn-support email" href="mailto:support@playbeat.gg"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Email</a>
+          <a class="btn-support whatsapp" href="https://wa.me/923318333368" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> WhatsApp</a>
+          <a class="btn-support telegram" href="https://t.me/playbeat" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg> Telegram</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-col-title">Marketplace</h3>
+          <div class="footer-nav-grid">
+            <a href="index.html" class="footer-nav-link">🏠 Home</a>
+            <a href="games.html" class="footer-nav-link">🎮 Games</a>
+            <a href="gift-cards.html" class="footer-nav-link">🎁 Gift Cards</a>
+            <a href="software.html" class="footer-nav-link">💻 Software</a>
+            <a href="ai-tools.html" class="footer-nav-link">🤖 AI Tools</a>
+            <a href="game-items.html" class="footer-nav-link">⚔️ Game Items</a>
+            <a href="accounts.html" class="footer-nav-link">👤 Accounts</a>
+            <a href="subscriptions.html" class="footer-nav-link">📺 Subscriptions</a>
+            <a href="top-up.html" class="footer-nav-link">💎 Top Up</a>
+            <a href="trending.html" class="footer-nav-link special">✦ Trending</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Discover</h3>
+          <ul class="footer-link-list">
+            <li><a href="trending.html">✦ Trending</a></li>
+            <li><a href="best-value.html">◈ Best Value</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Legal</h3>
+          <ul class="footer-link-list">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Newsletter</h3>
+          <p style="font-family:'Exo 2',sans-serif;font-size:11.5px;color:var(--text-dim);line-height:1.75;margin-bottom:14px;">Exclusive deals, flash sales, and new arrivals straight to your inbox.</p>
+          <div class="footer-nl-row">
+            <input type="email" id="footerEmail" placeholder="your@email.com" />
+            <button onclick="PB.subscribe('footerEmail')">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© <span id="yr"></span> <strong>PlayBeat Digital (Pvt) Ltd</strong> — All rights reserved. Prices in PKR. Reg. No. 00681011050474</p>
+        <nav class="footer-legal-links" aria-label="Legal">
+          <a href="privacy.html">Privacy</a><span>·</span>
+          <a href="terms.html">Terms</a><span>·</span>
+          <a href="refund.html">Refunds</a><span>·</span>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
 
-<div class="cart-toast" id="cartToast"></div>
-
-<script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-window.PB = {
-  addToCart(item){
-    showToast(`✅ Added: ${item.name} — ${item.price}`);
-  },
-  toggleWish(id, name){
-    const btn = document.querySelector(`.wishlist-btn[data-id="${id}"]`);
-    if(btn){
-      btn.classList.toggle('active');
-      btn.textContent = btn.classList.contains('active') ? '♥' : '♡';
-    }
-    showToast(`❤️ Wishlist updated: ${name}`);
-  }
-};
-
-function showToast(msg){
-  const t = document.getElementById('cartToast');
-  t.textContent = msg;
-  t.classList.add('show');
-  clearTimeout(window._toastTimer);
-  window._toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
-}
-</script>
+  <div class="cart-toast" id="cartToast"></div>
+  <script src="shared.js"></script>
 </body>
 </html>
